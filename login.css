@@ -1,0 +1,44 @@
+* {
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: Arial;
+    padding: 10px;
+    /*background: linear-gradient(to bottom, #ccffcc 0%, #669999 100%);*/
+    background-color:white;
+  }
+
+  /* Header/Blog Title */
+
+  .header {
+    padding: 10px;
+    text-align: center;
+    LINE-HEIGHT:5px;
+    vertical-align: center;
+    margin-top: 10px;
+    
+
+  }
+
+  .header h1 {
+    font-size: 75px;
+}
+    .card {
+    background-color: #1C7293;
+}
+    
+     .loginAlign {
+        vertical-align: center;
+         text-align: center;
+        }
+    .loginPosition {
+        text-align: center;
+    }
+    .createAccount {
+        text-align: center;
+}
+        
+        .whiteColor {
+            color: white
+        }

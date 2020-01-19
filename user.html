@@ -1,0 +1,144 @@
+<html lang="en">
+    <head>
+        <title>OneBST: Profile</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="user.css">
+        <script src="../src/user.js" async></script>
+    </head>
+    <body>
+
+        <div class="header">
+          <h1>OneBST</h1>
+          <h5>The single best place to buy, sell, and trade.</h5>
+        </div>
+
+        <div class="topnav">
+            <a href = "index.html">Home</a>
+            <a href = "#" style = "float:right">Log in</a>
+          <a href="#" style="float:right">Sign up</a>
+        </div>
+
+        <div class="row">
+          <div class="leftcolumn">
+            <h2>Profile</h2>
+              <div class="card">
+                <div class = "profiletable">
+                    <table>
+                        <tbody>
+                            <tr><td><img src="username-icon.png" width="100" height="100"></td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <h3 style = "color:white">Average Ratings: </h3><p>3.4</p>
+                <h4 style = "color: white">Full Name:</h4><p>Cole Blakley</p>
+                <h4 style = "color: white">Bio</h4>
+                <div class = "scrolltable">
+                    <table>
+                        <tbody>
+                            <tr><td>My name is Cole I have brown hair and my middle name is Sullivan, but you can call be sully.</td></tr>
+                        </tbody>
+                    </table>
+                  </div>
+
+                <div class ="button">
+                    <table>
+                        <tr><td>Sort</td></tr>
+                    </table>
+                  </div>
+                  
+                <div class = "scrolltable">
+                            <table>
+                            <tbody>
+                            <tr><td>"This guy ROCKS!"</td></tr>
+                            <tr><td>"He took a while to ship."</td></tr>
+                            <tr><td>"Would do business again."</td></tr>
+                            <tr><td>"He is really good at back-end stuff, like CRAZY good"</td></tr>
+                            <tr><td>"His middle name is Sully?"</td></tr>
+                            <tr><td>"Item arrived quick"</td></tr>
+                            <tr><td>Review7</td></tr>
+                            <tr><td>Review8</td></tr>
+                            <tr><td>Review9</td></tr>
+                            <tr><td>Review10</td></tr>
+                            <tr><td>Review11</td></tr>
+                            <tr><td>Review12</td></tr>
+                        </tbody>
+                    </table>
+
+                
+            </div>
+          </div>
+        </div>
+          <div class="middlecolumn">
+            <h2>Activity</h2>
+            <div class = "card">
+                <div class = "buttons">
+                    <table>
+                        <tbody>
+                            <tr><td>Search</td><td>Filter</td><td>Sort</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!--Put sales cards in Feed-->
+                <div id="Feed">
+                <div class = "card sale">
+                    <h3>Benchmade 42 in <i>Balisongs</i></h3>
+                    <div class="fakeimg" style="height:200px; width: 50%; display:inline-block;">No Image Available :(</div>
+                    <div class = "list" style=" display:inline-block;">
+                        <ul style="list-style-type:none;">
+                        <li style="color:green; font: 40px;">$400.00</li> 
+                        <li><b>Seller:</b>Cole Blakley</li>
+                        <li><b>Condition:</b> Mint</li>
+                        <li><b>Description:</b> Selling my BM42, only flipped once over carpet.</li>
+                        <li><b>Status: </b>Sale Pending</li>
+                        <li><a href = "#">Message Seller</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class = "card sale">
+                    <h3>Yoyofactory G5 in <i>Yoyoing</i></h3>
+                    <div class="fakeimg" style="height:200px; width: 50%; display:inline-block;">No Image Available :(</div>
+                    <div class = "list" style=" display:inline-block;">
+                        <ul style="list-style-type:none;">
+                            <li style="color:green; font: 40px;">$200.00</li> 
+                            <li><b>Seller:</b>Cole Blakley</li>
+                            <li><b>Condition:</b> Lightly Used</li>
+                            <li><b>Description:</b> Selling bc I need money for college</li>
+                            <li><b>Status: </b>For Sale</li>
+                            <li><a href = "#">Message Seller</a></li>
+                        </ul>
+                    </div>
+                </div>
+                </div>
+                <script>
+                        searchPosts({"name": "cole"},
+                        function(searchResults) {
+                        console.log("Results:\n");
+                        console.log(searchResults);
+                        ReactDOM.render(<section>Posts</section>, document.getElementById("FeedTitle"))
+                        if(searchResults.length > 0)
+                        {
+                            ReactDOM.render(<Posts posts = {searchResults}/>, document.getElementById('Feed'))
+                            
+                        }
+                        else
+                            {
+                                ReactDOM.render(<NoPosts/>, document.getElementById('Feed'))
+                            }
+                        })();
+                </script>
+                <div class = "button">
+                    <table>
+                        <tr><td>Load More</td></tr>
+                    </table>
+                </div>
+            </div>
+          </div>
+
+        </div>
+        
+        <div class="footer">
+          <h2>Footer</h2>
+        </div>
+    </body>
+</html>
